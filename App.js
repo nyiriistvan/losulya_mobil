@@ -1,3 +1,11 @@
+// File: App.js
+// Author: Nyiri István
+// Copyright: 2023, Nyiri István
+// Group: Szoft_II_N
+// Date: 2023-04-17
+// Github: https://github.com/nyiriistvan/
+// Licenc: GNU GPL 
+
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Input, Button } from 'react-native-elements';
@@ -17,6 +25,11 @@ const App = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Készítette: Nyiri István</Text>
+        <Text style={styles.headerText}>Osztály: Szoft_II_N</Text>
+        <Text style={styles.headerText}>Dátum: {new Date().toLocaleDateString()}</Text>
+        </View>
       <Input
         label="Ló kerülete (CM)"
         value={chestCircumference}
@@ -48,6 +61,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: moderateScale(20),
+  },
+  header: {
+    marginBottom: moderateScale(20),
+  },
+  headerText: {
+    fontSize: moderateScale(16),
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
   result: {
     marginTop: moderateScale(20),
