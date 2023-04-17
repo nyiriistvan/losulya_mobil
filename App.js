@@ -36,9 +36,24 @@ const App = () => {
       />
       {horseWeight && (
         <Text style={styles.result}>
-          Estimated Weight: {horseWeight} lbs
+          Ló súlya: {horseWeight} kg
         </Text>
       )}
     </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: moderateScale(20),
+  },
+  result: {
+    marginTop: moderateScale(20),
+    fontSize: moderateScale(18),
+    fontWeight: 'bold',
+  },
+});
+
+export default App;
